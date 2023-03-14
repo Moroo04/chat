@@ -1,0 +1,70 @@
+div {
+    width: 500px;
+    height: 400px;
+    background-color: #33b5e5;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+body {
+    background-color: #33b5e5;
+    font-family: "Tenor Sans", sans-serif;
+    font-size: 18px;
+}
+
+
+
+a {
+    color: white;
+    text-decoration: none;
+    
+}
+
+input::placeholder {
+    color: #8b8686;
+    font-size: 22px;
+}
+
+input.feld {
+    background-color: #33b5e5;
+    color: white;
+    border: none;
+    border-bottom: solid rgba(250, 250, 250, 0.4);
+    border-bottom-style: dotted;
+    width: 500px;
+    padding-left: 1em;
+    padding-bottom: 2em;    
+    padding-top: 2em;
+    font-size: 22px;
+}
+
+input.feld:focus {
+    background-color: #64bee8;
+    outline: none;
+    font-size: 22px;
+    
+}
+
+#anmelden {
+    color: #107da4c7;
+    background-color: white;
+    border: none;
+    padding-left: 2.8em;
+    padding-right: 2.8em;
+    padding-top: 1.2em;
+    padding-bottom: 1.2em;
+    float: right;
+    font-size: 15px;
+}
+
+#anmelden:hover{
+    background-color: #dbe8ee;
+}
+
+h1 {
+    color: white;
+
+}
