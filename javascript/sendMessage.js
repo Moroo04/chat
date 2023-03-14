@@ -1,29 +1,30 @@
-const messageInput = document.getElementById('message-input');
-const unique_id = document.getElementById('unique_id').value;
-const chatLog = document.getElementById('chatlog');
+// Funktion, die die Eingabe speichert und an die PHP-Datei sendet
+function saveMessage() {
+    // Inhalt des Input-Feldes erfassen
+    let message = document.getElementById("message-input").value;
 
-function sendMessage() {
-    const message = messageInput.value;
-    if (message.trim() === '') return; // verhindert das Senden leerer Nachrichten
+    // Prüfen, ob das Input-Feld leer ist
+    if (message.trim() === "") {
+        return;
+    }
 
-    var xhttp = new XMLHttpRequest();
-    var url = "model/sendMessage.php?id=" + unique_id + "&text=" + message ; // Hier werden die Parameter erstellt
+    // AJAX-Anfrage erstellen
+    let xhr = new XMLHttpRequest();
 
-    xhttp.open("POST", url, true);
-    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            console.log('Nachricht gesendet');
-        }
-    };
-    xhttp.send();
+    // Daten für die Anfrage vorbereiten
+    let data = new FormData();
+    data.append('message', message);
 
-    messageInput.value = '';
+    // Anfrage senden
+    xhr.open("POST", "model/sendMessage.php");
+    xhr.send(data);
+    document.getElementById("message-input").value = "";
 }
 
-messageInput.addEventListener('keyup', function (event) {
-    if (event.key === 'Enter') {
-        sendMessage();
+// Event-Listener hinzufügen, um zu prüfen, ob die Enter-Taste gedrückt wurde
+document.getElementById("message-input").addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        saveMessage();
+        event.preventDefault();
     }
 });
-

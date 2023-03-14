@@ -26,12 +26,14 @@
             </table>
 
         </div>
-        <div id="input">
-            <input id="unique_id" value="<?php echo $_SESSION['unique_id']; ?>" hidden>
-            <input type="text" id="message-input" placeholder="Nachricht eingeben...">
-        </div>
+        <form action="#" class="typing-area">
+            <div id="input">
+
+                <input type="text" id="message-input" name="message" placeholder="Nachricht eingeben...">
+            </div>
+        </form>
     </div>
-      
+
     <script src="javascript/sendMessage.js"></script>
     <script src="javascript/getMessage.js"></script>
 
