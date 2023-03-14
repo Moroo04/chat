@@ -23,6 +23,10 @@ class Nachricht {
         $this->text = $text;
     }
 
+    public function setPerson_id(int $id) {
+        $this->person_id = $id;
+    }
+
     public function setPerson(Person $person) {
         $this->person_id = $person->getId();
     }

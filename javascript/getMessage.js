@@ -1,33 +1,22 @@
-function loadMessages() {
-    // AJAX-Anfrage an den Server senden
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'getNachricht.php');
-    xhr.onload = function() {
-      if (xhr.status === 200) {
-        // Antwort als JSON-Objekt parsen
-        var messages = JSON.parse(xhr.responseText);
-        
-        // Chat-Log-Element auswählen
-        var chatlog = document.getElementById('chatlog');
-        
-        // Nachrichten in Chat-Log einfügen
-        for (var i = 0; i < messages.length; i++) {
-          var message = messages[i];
-          var text = message.text;
-          var name = message.name;
-          var html = '<div class="message">' + '<span class="name">' + name + '</span>' + '<span class="text">' + text + '</span>' + '</div>';
-          chatlog.innerHTML += html;
-        }
-        
-        // Scrollen zum Ende des Chat-Logs
-        chatlog.scrollTop = chatlog.scrollHeight;
-      }
-    };
-    xhr.send();
-  }
-  
-  // Funktion zum Senden der Nachricht
-  function sendMessage() {
-    // Code zum Senden der Nachricht...
-  }
-  
+setInterval(function () {
+  // AJAX-Aufruf an "chat.php"
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'chat.php');
+  xhr.onload = function () {
+    if (xhr.status === 200) {
+      // Antwort erfolgreich erhalten
+      var responseText = xhr.responseText;
+      var parser = new DOMParser();
+      var newDoc = parser.parseFromString(responseText, "text/html");
+      var newBody = newDoc.getElementById('chatlog').innerHTML;
+
+      // Aktualisiere die aktuelle Seite mit dem neuen Inhalt
+      document.getElementById('chatlog').innerHTML = newBody;
+      
+    } else {
+      // Fehler bei der Antwort
+      console.log('Fehler bei der Antwort: ' + xhr.status);
+    }
+  };
+  xhr.send();
+}, 500);

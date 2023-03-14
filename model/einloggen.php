@@ -12,6 +12,7 @@ $result = $db->query($stmt);
 $result = $result->fetchAll();
 
 if ($result) {
+    $_SESSION['unique_id'] = $result[0]['id'];
     $_SESSION['eingeloggt'] = $benutzername;
     header('Location: ../chat.php');
 }else{

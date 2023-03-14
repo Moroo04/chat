@@ -1,6 +1,9 @@
 <?php
 trait Findable
 {
+
+    
+
     public static function findeAlle()
     {
         $sql = vsprintf(
@@ -12,7 +15,7 @@ trait Findable
 
         return $abfrage->fetchAll();
     }
-    
+
     public static function finde($id)
     {
         $sql = vsprintf(

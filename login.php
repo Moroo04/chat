@@ -4,8 +4,9 @@ spl_autoload_register('autoloadControllers');
 spl_autoload_register('autoloadEntities');
 spl_autoload_register('autoloadTraits');
 session_start();
-?>
 
+
+?>
 
 <!DOCTYPE html>
 <html>

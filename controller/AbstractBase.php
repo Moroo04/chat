@@ -23,6 +23,7 @@ abstract class AbstractBase
 
     public function render404()
     {
+        
         http_response_code(404);
         die('Error 404');
     }
