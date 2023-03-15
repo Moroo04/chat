@@ -1,3 +1,8 @@
+function scrollToBottom() {
+    var chatLog = document.getElementById("chatlog");
+    chatLog.scrollTop = chatLog.scrollHeight;
+  }
+
 // Funktion, die die Eingabe speichert und an die PHP-Datei sendet
 function saveMessage() {
     // Inhalt des Input-Feldes erfassen
@@ -19,6 +24,7 @@ function saveMessage() {
     xhr.open("POST", "model/sendMessage.php");
     xhr.send(data);
     document.getElementById("message-input").value = "";
+    
 }
 
 // Event-Listener hinzufügen, um zu prüfen, ob die Enter-Taste gedrückt wurde

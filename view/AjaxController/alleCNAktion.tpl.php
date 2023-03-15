@@ -16,7 +16,7 @@
         </p>
         <div id="chatlog">
             <table>
-                <?php foreach ($nachrichten as $nachricht) { ?>
+                <?php foreach (array_slice($nachrichten, -20) as $nachricht) { ?>
                     <tr>
                         <td>
                             <?= $nachricht->getPerson()->getName() . ': ' . $nachricht->getText() ?>
@@ -36,6 +36,7 @@
 
     <script src="javascript/sendMessage.js"></script>
     <script src="javascript/getMessage.js"></script>
+
 
 </body>
 
