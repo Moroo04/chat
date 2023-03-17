@@ -1,8 +1,3 @@
-function scrollToBottom() {
-    var chatLog = document.getElementById("chatlog");
-    chatLog.scrollTop = chatLog.scrollHeight;
-  }
-
 // Funktion, die die Eingabe speichert und an die PHP-Datei sendet
 function saveMessage() {
     // Inhalt des Input-Feldes erfassen
@@ -19,7 +14,7 @@ function saveMessage() {
     // Daten für die Anfrage vorbereiten
     let data = new FormData();
     data.append('message', message);
-
+    console.log(data);
     // Anfrage senden
     xhr.open("POST", "model/sendMessage.php");
     xhr.send(data);

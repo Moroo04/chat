@@ -2,8 +2,6 @@
 trait Findable
 {
 
-    
-
     public static function findeAlle()
     {
         $sql = vsprintf(

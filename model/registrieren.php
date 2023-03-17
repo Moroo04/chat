@@ -6,18 +6,16 @@ $benutzername = $_POST['benutzername'];
 $passwort = $_POST['passwort'];
 $passwort_ok = $_POST['passwort_ok'];
 
-$db = DB::getDB();
-
-$stmt = "INSERT INTO person (name, passwort) VALUES ('$benutzername','$passwort')";
 if($passwort != $passwort_ok){
     header('Location: ../register.php?error=1');
     } else {
-        $result = $db->query($stmt);       
-            header('Location: ../login.php');     
+            header("Location: ../index.php?aktion=benutzerHinzufuegen&controller=ajax&name=$benutzername&passwort=$passwort");     
      }
 
 
 
-//hallo
+
+
+
 
 ?>

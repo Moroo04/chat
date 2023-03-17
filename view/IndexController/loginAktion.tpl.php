@@ -1,13 +1,3 @@
-<?php
-require_once 'model/funktionen.inc.php';
-spl_autoload_register('autoloadControllers');
-spl_autoload_register('autoloadEntities');
-spl_autoload_register('autoloadTraits');
-session_start();
-
-
-?>
-
 <!DOCTYPE html>
 <html>
 
@@ -29,7 +19,7 @@ session_start();
             <p>
                 <input class="feld" type="password" name="passwort" placeholder="Passwort" required />
             </p>
-            <a id="registrieren" href="register.php">Registrieren</a>
+            <a id="registrieren" href="index.php?aktion=register">Registrieren</a>
             <p>
                 <input id="anmelden" type="submit" value="Anmelden" />
             </p>

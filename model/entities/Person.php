@@ -1,6 +1,7 @@
 <?php
 
-class Person{
+class Person
+{
     use ActiveRecordable, Findable, Persistable;
 
     private int $id = 0;
@@ -54,5 +55,13 @@ class Person{
         self::$table = $table;
     }
 
+    public static function getPersonNamePasswort($name, $passwort)
+    {
+        $stmt = "SELECT * FROM person WHERE name LIKE '$name' AND passwort LIKE '$passwort'";
+        $result = DB::getDB()->query($stmt);
+        $result = $result->fetchAll();
+
+        return $result;
+    }
 
 }

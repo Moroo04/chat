@@ -15,15 +15,6 @@
             <?php echo $_SESSION['eingeloggt'] ?>
         </p>
         <div id="chatlog">
-            <table>
-                <?php foreach (array_slice($nachrichten, -20) as $nachricht) { ?>
-                    <tr>
-                        <td>
-                            <?= $nachricht->getPerson()->getName() . ': ' . $nachricht->getText() ?>
-                        </td>
-                    </tr>
-                <?php } ?>
-            </table>
 
         </div>
         <form action="#" class="typing-area">

@@ -1,13 +1,3 @@
-<?php
-require_once 'model/funktionen.inc.php';
-spl_autoload_register('autoloadControllers');
-spl_autoload_register('autoloadEntities');
-spl_autoload_register('autoloadTraits');
-session_start();
-
-
-?>
-
 <!DOCTYPE html>
 <html>
 
@@ -32,14 +22,15 @@ session_start();
             <p>
                 <input class="feldr" type="password" name="passwort_ok" placeholder="Passwort bestätigen" required />
             </p>
-            <a id="registrieren" href="login.php">Login</a>
+            <a id="registrieren" href="index.php?aktion=login">Login</a>
             <p>
                 <input id="anmelden" type="submit" value="Registrieren" />
             </p>
 
         </form>
         <?php if (isset($_GET['error']) && $_GET['error'] == 1) { ?>
-            <p style="color: red; font-family: Tenor Sans, sans-serif; font-size: 16px; font-weight: bold;">Passwörter stimmen nicht überein
+            <p style="color: red; font-family: Tenor Sans, sans-serif; font-size: 16px; font-weight: bold;">Passwörter
+                stimmen nicht überein
             </p>
         <?php } ?>
     </div>

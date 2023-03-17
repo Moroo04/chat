@@ -1,24 +1,18 @@
-function scrollToBottom() {
-  var chatLog = document.getElementById("chatlog");
-  chatLog.scrollTop = chatLog.scrollHeight;
-}
-
-
 setInterval(function () {
   
   // AJAX-Aufruf an "chat.php"
-  var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'chat.php');
+  let xhr = new XMLHttpRequest();
+  xhr.open('GET', 'index.php?aktion=alleNachrichten&controller=ajax');
   xhr.onload = function () {
     if (xhr.status === 200) {
       // Antwort erfolgreich erhalten
-      var responseText = xhr.responseText;
-      var parser = new DOMParser();
-      var newDoc = parser.parseFromString(responseText, "text/html");
-      var newBody = newDoc.getElementById('chatlog').innerHTML;
+      let responseText = xhr.responseText;
+      let parser = new DOMParser();
+      let newDoc = parser.parseFromString(responseText, "text/html");
       
+     
       // Aktualisiere die aktuelle Seite mit dem neuen Inhalt
-      document.getElementById('chatlog').innerHTML = newBody;
+      document.getElementById('chatlog').innerHTML = newDoc.querySelector('#Nachrichten').innerHTML;
       
       
     } else {
@@ -29,4 +23,4 @@ setInterval(function () {
   
   xhr.send();
   
-}, 500);
+}, 1);
