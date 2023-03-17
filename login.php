@@ -29,7 +29,7 @@ session_start();
             <p>
                 <input class="feld" type="password" name="passwort" placeholder="Passwort" required />
             </p>
-            <a id="registrieren" href="register.php">Benutzer erstellen</a>
+            <a id="registrieren" href="register.php">Registeren</a>
             <p>
                 <input id="anmelden" type="submit" value="Anmelden" />
             </p>

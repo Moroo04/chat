@@ -32,6 +32,7 @@ session_start();
             <p>
                 <input class="feldr" type="password" name="passwort_ok" placeholder="Passwort bestätigen" required />
             </p>
+            <a id="registrieren" href="login.php">Login</a>
             <p>
                 <input id="anmelden" type="submit" value="Registrieren" />
             </p>
