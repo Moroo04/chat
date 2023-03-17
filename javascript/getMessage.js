@@ -1,8 +1,12 @@
+
 setInterval(function () {
   
   // AJAX-Aufruf an "chat.php"
   let xhr = new XMLHttpRequest();
+
   xhr.open('GET', 'index.php?aktion=alleNachrichten&controller=ajax');
+
+
   xhr.onload = function () {
     if (xhr.status === 200) {
       // Antwort erfolgreich erhalten

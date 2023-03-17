@@ -1,3 +1,4 @@
+
 // Funktion, die die Eingabe speichert und an die PHP-Datei sendet
 function saveMessage() {
     // Inhalt des Input-Feldes erfassen
