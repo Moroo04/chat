@@ -23,6 +23,12 @@ a {
     
 }
 
+a:hover {
+    color: white;
+    text-decoration: underline;
+    
+}
+
 input::placeholder {
     color: #8b8686;
     font-size: 22px;
