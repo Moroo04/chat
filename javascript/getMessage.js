@@ -1,5 +1,5 @@
 function scrollToBottom() {
-  var chatLog = document.getElementById("chatlog");
+  let chatLog = document.getElementById("chatlog");
   chatLog.scrollTop = chatLog.scrollHeight;
 }
 
@@ -7,15 +7,15 @@ function scrollToBottom() {
 setInterval(function () {
   
   // AJAX-Aufruf an "chat.php"
-  var xhr = new XMLHttpRequest();
+  let xhr = new XMLHttpRequest();
   xhr.open('GET', 'chat.php');
   xhr.onload = function () {
     if (xhr.status === 200) {
       // Antwort erfolgreich erhalten
-      var responseText = xhr.responseText;
-      var parser = new DOMParser();
-      var newDoc = parser.parseFromString(responseText, "text/html");
-      var newBody = newDoc.getElementById('chatlog').innerHTML;
+      let responseText = xhr.responseText;
+      let parser = new DOMParser();
+      let newDoc = parser.parseFromString(responseText, "text/html");
+      let newBody = newDoc.getElementById('chatlog').innerHTML;
       
       // Aktualisiere die aktuelle Seite mit dem neuen Inhalt
       document.getElementById('chatlog').innerHTML = newBody;

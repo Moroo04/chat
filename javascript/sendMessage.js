@@ -1,5 +1,5 @@
 function scrollToBottom() {
-    var chatLog = document.getElementById("chatlog");
+    let chatLog = document.getElementById("chatlog");
     chatLog.scrollTop = chatLog.scrollHeight;
   }
 
