@@ -4,7 +4,7 @@ div {
     background-color: #33b5e5;
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 38%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
@@ -41,7 +41,28 @@ input.feld {
     font-size: 22px;
 }
 
+input.feldr {
+    background-color: #33b5e5;
+    color: white;
+    border: none;
+    border-bottom: solid rgba(250, 250, 250, 0.4);
+    border-bottom-style: dotted;
+    height: 30px;
+    width: 500px;
+    padding-left: 1em;
+    padding-bottom: 2em;    
+    padding-top: 2em;
+    font-size: 22px;
+}
+
 input.feld:focus {
+    background-color: #64bee8;
+    outline: none;
+    font-size: 22px;
+    
+}
+
+input.feldr:focus {
     background-color: #64bee8;
     outline: none;
     font-size: 22px;

@@ -20,23 +20,25 @@ session_start();
 
 <body>
     <div class="content">
-        <form action="model/einloggen.php" method="post">
+        <form action="model/registrieren.php" method="post">
 
             <h1>Willkommen.</h1>
             <p>
-                <input class="feld" type="text" name="benutzername" placeholder="Benutzername" required />
+                <input class="feldr" type="text" name="benutzername" placeholder="Benutzername" required />
             </p>
             <p>
-                <input class="feld" type="password" name="passwort" placeholder="Passwort" required />
+                <input class="feldr" type="password" name="passwort" placeholder="Passwort" required />
             </p>
-            <a id="registrieren" href="register.php">Benutzer erstellen</a>
             <p>
-                <input id="anmelden" type="submit" value="Anmelden" />
+                <input class="feldr" type="password" name="passwort_ok" placeholder="Passwort bestätigen" required />
+            </p>
+            <p>
+                <input id="anmelden" type="submit" value="Registrieren" />
             </p>
 
         </form>
         <?php if (isset($_GET['error']) && $_GET['error'] == 1) { ?>
-            <p style="color: red; font-family: Tenor Sans, sans-serif; font-size: 16px; font-weight: bold;">Benutzername oder Passwort falsch
+            <p style="color: red; font-family: Tenor Sans, sans-serif; font-size: 16px; font-weight: bold;">Passwörter stimmen nicht überein
             </p>
         <?php } ?>
     </div>
