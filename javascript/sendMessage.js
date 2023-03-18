@@ -15,7 +15,6 @@ function saveMessage() {
     // Daten für die Anfrage vorbereiten
     let data = new FormData();
     data.append('message', message);
-    console.log(data);
     // Anfrage senden
     xhr.open("POST", "model/sendMessage.php");
     xhr.send(data);

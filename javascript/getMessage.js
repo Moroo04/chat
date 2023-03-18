@@ -27,4 +27,4 @@ setInterval(function () {
   
   xhr.send();
   
-}, 1);
+}, 200);
