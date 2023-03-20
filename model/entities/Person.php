@@ -2,7 +2,7 @@
 
 class Person
 {
-    use ActiveRecordable, Findable, Persistable;
+    use ActiveRecordable, Findable, Persistable, Deletable;
 
     private int $id = 0;
     private string $name = '';

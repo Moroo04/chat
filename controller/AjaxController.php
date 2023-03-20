@@ -11,6 +11,11 @@ class AjaxController extends AbstractBase
     $this->addContext("nachrichten", Nachricht::findeAlle());
   }
 
+  public function nachrichtenLeerenAktion(){
+    Nachricht::tabelleLeeren();
+    header('Location: index.php?aktion=zeigeChat');
+  }
+
   public function ueberpreuefeLoginAktion()
   {
 
