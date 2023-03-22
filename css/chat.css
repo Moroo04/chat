@@ -43,6 +43,10 @@
     font-family: "Tenor Sans", sans-serif;
     font-size: 23px;
     font-weight: bold;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 body {

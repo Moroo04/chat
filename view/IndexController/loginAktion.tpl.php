@@ -13,7 +13,7 @@
         <div class="content">
             <form action="index.php?aktion=ueberpreuefeLogin&controller=ajax" method="post">
 
-                <h1>Willkommen.</h1>
+                <h1 class="noselect">Willkommen.</h1>
                 <p>
                     <input class="feld" type="text" name="benutzername" placeholder="Benutzername" required />
                 </p>

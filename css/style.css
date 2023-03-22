@@ -4,6 +4,13 @@ body {
     font-size: 18px;
 }
 
+.noselect {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
 .content {
     width: 500px;
     height: 400px;
@@ -14,7 +21,7 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.content-register{
+.content-register {
     width: 500px;
     height: 400px;
     position: absolute;
@@ -22,7 +29,7 @@ body {
     top: 38%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    
+
 }
 
 .login-wrapper {
@@ -39,7 +46,7 @@ body {
 
 }
 
-.register-wrapper{
+.register-wrapper {
     width: 700px;
     height: 580px;
     border: 2px solid #fffafa;

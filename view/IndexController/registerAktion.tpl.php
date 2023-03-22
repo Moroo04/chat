@@ -13,7 +13,7 @@
         <div class="content-register">
             <form action="index.php?aktion=benutzerHinzufuegen&controller=ajax" method="post">
 
-                <h1>Willkommen.</h1>
+                <h1 class="noselect">Willkommen.</h1>
                 <p>
                     <input class="feldr" type="text" name="benutzername" placeholder="Benutzername" required />
                 </p>
