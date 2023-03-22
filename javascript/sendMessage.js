@@ -16,7 +16,7 @@ function saveMessage() {
     let data = new FormData();
     data.append('message', message);
     // Anfrage senden
-    xhr.open("POST", "model/sendMessage.php");
+    xhr.open("POST", "index.php?aktion=nachrichtHinzufuegen&controller=ajax");
     xhr.send(data);
     document.getElementById("message-input").value = "";
     

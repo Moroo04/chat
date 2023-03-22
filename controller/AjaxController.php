@@ -11,7 +11,8 @@ class AjaxController extends AbstractBase
     $this->addContext("nachrichten", Nachricht::findeAlle());
   }
 
-  public function nachrichtenLeerenAktion(){
+  public function nachrichtenLeerenAktion()
+  {
     Nachricht::tabelleLeeren();
     header('Location: index.php?aktion=zeigeChat');
   }
@@ -19,10 +20,10 @@ class AjaxController extends AbstractBase
   public function ueberpreuefeLoginAktion()
   {
 
-    $person = Person::getPersonNamePasswort($_GET['name'], $_GET['passwort']);
+    $person = Person::getPersonNamePasswort($_POST['benutzername'], $_POST['passwort']);
     if ($person) {
       $_SESSION['unique_id'] = $person[0]['id'];
-      $_SESSION['eingeloggt'] = $_GET['name'];
+      $_SESSION['eingeloggt'] = $_POST['benutzername'];
       header('Location: index.php?aktion=zeigeChat');
     } else {
       header('Location: index.php?error=1');
@@ -31,18 +32,25 @@ class AjaxController extends AbstractBase
 
   public function benutzerHinzufuegenAktion()
   {
-    $name = $_GET['name'];
-    $passwort = $_GET['passwort'];
-    $person = new Person();
-    $person->__construct(["name" => "$name", "passwort" => "$passwort"]);
-    $person->speichere();
-    header("Location: index.php?aktion=login");
+    $name = $_POST['benutzername'];
+    $passwort = $_POST['passwort'];
+    $passwort_ok = $_POST['passwort_ok'];
+
+    if ($passwort != $passwort_ok) {
+      header('Location: index.php?aktion=register&error=1');
+    } else {
+      $person = new Person();
+      $person->__construct(["name" => "$name", "passwort" => "$passwort"]);
+      $person->speichere();
+      header("Location: index.php?aktion=login");
+    }
+
   }
 
   public function nachrichtHinzufuegenAktion()
   {
-    $text = $_GET['message'];
-    $id = $_GET['id'];
+    $text = $_POST['message'];
+    $id = $_SESSION['unique_id'];
     $nachricht = new Nachricht();
     $nachricht->__construct(["text" => "$text", "person_id" => "$id"]);
     $nachricht->speichere();

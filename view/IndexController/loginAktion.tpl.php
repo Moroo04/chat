@@ -11,7 +11,7 @@
 <body>
     <div class="login-wrapper">
         <div class="content">
-            <form action="model/einloggen.php" method="post">
+            <form action="index.php?aktion=ueberpreuefeLogin&controller=ajax" method="post">
 
                 <h1>Willkommen.</h1>
                 <p>

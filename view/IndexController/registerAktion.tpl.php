@@ -11,7 +11,7 @@
 <body>
     <div class="register-wrapper">
         <div class="content-register">
-            <form action="model/registrieren.php" method="post">
+            <form action="index.php?aktion=benutzerHinzufuegen&controller=ajax" method="post">
 
                 <h1>Willkommen.</h1>
                 <p>
