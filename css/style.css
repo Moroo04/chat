@@ -1,37 +1,72 @@
-div {
-    width: 500px;
-    height: 400px;
-    background-color: #33b5e5;
-    position: absolute;
-    left: 50%;
-    top: 38%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-
 body {
     background-color: #33b5e5;
     font-family: "Tenor Sans", sans-serif;
     font-size: 18px;
 }
 
+.content {
+    width: 500px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
 
+.content-register{
+    width: 500px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 38%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    
+}
+
+.login-wrapper {
+    width: 700px;
+    height: 500px;
+    border: 2px solid #fffafa;
+    box-sizing: border-box;
+    border-radius: 8px;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+}
+
+.register-wrapper{
+    width: 700px;
+    height: 580px;
+    border: 2px solid #fffafa;
+    box-sizing: border-box;
+    border-radius: 8px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
 
 a {
     color: white;
     text-decoration: none;
-    
+
 }
 
 a:hover {
     color: white;
     text-decoration: underline;
-    
+
 }
 
 input::placeholder {
     color: #8b8686;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 input.feld {
@@ -42,7 +77,7 @@ input.feld {
     border-bottom-style: dotted;
     width: 500px;
     padding-left: 1em;
-    padding-bottom: 2em;    
+    padding-bottom: 2em;
     padding-top: 2em;
     font-size: 22px;
 }
@@ -53,26 +88,26 @@ input.feldr {
     border: none;
     border-bottom: solid rgba(250, 250, 250, 0.4);
     border-bottom-style: dotted;
-    height: 30px;
+    height: 15px;
     width: 500px;
     padding-left: 1em;
-    padding-bottom: 2em;    
+    padding-bottom: 2em;
     padding-top: 2em;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 input.feld:focus {
     background-color: #64bee8;
     outline: none;
     font-size: 22px;
-    
+
 }
 
 input.feldr:focus {
     background-color: #64bee8;
     outline: none;
-    font-size: 22px;
-    
+    font-size: 20px;
+
 }
 
 #anmelden {
@@ -87,7 +122,7 @@ input.feldr:focus {
     font-size: 15px;
 }
 
-#anmelden:hover{
+#anmelden:hover {
     background-color: #dbe8ee;
 }
 

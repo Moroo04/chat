@@ -9,26 +9,29 @@
 </head>
 
 <body>
-    <div class="content">
-        <form action="model/einloggen.php" method="post">
+    <div class="login-wrapper">
+        <div class="content">
+            <form action="model/einloggen.php" method="post">
 
-            <h1>Willkommen.</h1>
-            <p>
-                <input class="feld" type="text" name="benutzername" placeholder="Benutzername" required />
-            </p>
-            <p>
-                <input class="feld" type="password" name="passwort" placeholder="Passwort" required />
-            </p>
-            <a id="registrieren" href="index.php?aktion=register">Registrieren</a>
-            <p>
-                <input id="anmelden" type="submit" value="Anmelden" />
-            </p>
+                <h1>Willkommen.</h1>
+                <p>
+                    <input class="feld" type="text" name="benutzername" placeholder="Benutzername" required />
+                </p>
+                <p>
+                    <input class="feld" type="password" name="passwort" placeholder="Passwort" required />
+                </p>
+                <a id="registrieren" href="index.php?aktion=register">Registrieren</a>
+                <p>
+                    <input id="anmelden" type="submit" value="Anmelden" />
+                </p>
 
-        </form>
-        <?php if (isset($_GET['error']) && $_GET['error'] == 1) { ?>
-            <p style="color: red; font-family: Tenor Sans, sans-serif; font-size: 16px; font-weight: bold;">Benutzername oder Passwort falsch
-            </p>
-        <?php } ?>
+            </form>
+            <?php if (isset($_GET['error']) && $_GET['error'] == 1) { ?>
+                <p style="color: red; font-family: Tenor Sans, sans-serif; font-size: 16px; font-weight: bold;">Benutzername
+                    oder Passwort falsch
+                </p>
+            <?php } ?>
+        </div>
     </div>
 
 

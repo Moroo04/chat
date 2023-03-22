@@ -9,32 +9,34 @@
 </head>
 
 <body>
-    <div class="content">
-        <form action="model/registrieren.php" method="post">
+    <div class="register-wrapper">
+        <div class="content-register">
+            <form action="model/registrieren.php" method="post">
 
-            <h1>Willkommen.</h1>
-            <p>
-                <input class="feldr" type="text" name="benutzername" placeholder="Benutzername" required />
-            </p>
-            <p>
-                <input class="feldr" type="password" name="passwort" placeholder="Passwort" required />
-            </p>
-            <p>
-                <input class="feldr" type="password" name="passwort_ok" placeholder="Passwort bestätigen" required />
-            </p>
-            <a id="registrieren" href="index.php?aktion=login">Login</a>
-            <p>
-                <input id="anmelden" type="submit" value="Registrieren" />
-            </p>
+                <h1>Willkommen.</h1>
+                <p>
+                    <input class="feldr" type="text" name="benutzername" placeholder="Benutzername" required />
+                </p>
+                <p>
+                    <input class="feldr" type="password" name="passwort" placeholder="Passwort" required />
+                </p>
+                <p>
+                    <input class="feldr" type="password" name="passwort_ok" placeholder="Passwort bestätigen"
+                        required />
+                </p>
+                <a id="registrieren" href="index.php?aktion=login">Login</a>
+                <p>
+                    <input id="anmelden" type="submit" value="Registrieren" />
+                </p>
 
-        </form>
-        <?php if (isset($_GET['error']) && $_GET['error'] == 1) { ?>
-            <p style="color: red; font-family: Tenor Sans, sans-serif; font-size: 16px; font-weight: bold;">Passwörter
-                stimmen nicht überein
-            </p>
-        <?php } ?>
+            </form>
+            <?php if (isset($_GET['error']) && $_GET['error'] == 1) { ?>
+                <p style="color: red; font-family: Tenor Sans, sans-serif; font-size: 16px; font-weight: bold;">Passwörter
+                    stimmen nicht überein
+                </p>
+            <?php } ?>
+        </div>
     </div>
-
 
 </body>
 

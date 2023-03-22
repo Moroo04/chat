@@ -13,8 +13,10 @@
 </head>
 
 <body>
+
     <div id="chat_wrapper">
         <div id="chat">
+
             <a href="index.php" title="Ausloggen">
                 <i class="fa fa-sign-out" style="font-size:60px"></i>
             </a>
@@ -24,23 +26,23 @@
             <p id="benutzer">Benutzer:
                 <?php echo $_SESSION['eingeloggt'] ?>
             </p>
-
+                
             <div id="chatlog">
 
             </div>
+
             <form action="#" class="typing-area">
                 <div id="input">
-
                     <input type="text" id="message-input" name="message" placeholder="Nachricht eingeben...">
                 </div>
             </form>
+
         </div>
     </div>
 
     <script src="javascript/sendMessage.js"></script>
     <script src="javascript/getMessage.js"></script>
-
-
+    
 </body>
 
 </html>
