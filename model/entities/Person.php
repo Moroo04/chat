@@ -30,11 +30,6 @@ class Person
         return $this->passwort;
     }
 
-    public static function getTable()
-    {
-        return self::$table;
-    }
-
     public function setId(int $id): void
     {
         $this->id = $id;
@@ -50,10 +45,7 @@ class Person
         $this->passwort = $passwort;
     }
 
-    public static function setTable($table): void
-    {
-        self::$table = $table;
-    }
+   
 
     public static function getPersonNamePasswort($name, $passwort)
     {

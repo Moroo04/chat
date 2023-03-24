@@ -27,7 +27,6 @@ abstract class AbstractBase
         http_response_code(404);
         die('Error 404');
     }
-
     protected function setTemplate($template, $controller = null)
     {
         if (empty($controller)) {
